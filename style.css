@@ -332,13 +332,28 @@ lord-icon{
     background-image: url(./res/clients/experiencia\ 2\ sp.png);
 }
 
+.antonia:hover{
+    background-color: transparent;
+    background-image: url(./res/clients/Antonia.gif);
+}
+
 .indian{
     background-image: url(./res/clients/vshd-design-jlt-zaaz-wellness--amp--beauty-spa-shops-archello.1616054943\ 1.png);
 }
 
+.indian:hover{
+    background-image: url(./res/clients/screen-capture.gif);
+}
+
+
 .hidraulica{
     background-image: url(./res/clients/contact.png);
 }
+
+.hidraulica:hover{
+    background-image: url(./res/clients/screen-capture.gif);
+}
+
 
 .box-job-most:hover img{
     display: none;
