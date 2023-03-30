@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
+    scroll-behavior: smooth;
 }
 
 
@@ -40,14 +41,44 @@ body{
     background-color: black;
 }
 
+
 .nav-bar{
-    background-color: transparent;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    position: fixed; 
+    z-index: 100;
 }
+
+
+.nav{
+    display: flex;
+    position: fixed; 
+    background-color: rgba(61, 61, 61, 0.733);
+    width: 45vw;
+    height: 50px;
+    z-index: 100;
+    top: 10px;
+    border-radius: 8px;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.nav a:hover{
+    color:var(--naranja) ;
+}
+
 
 .box-img{
     height: 120px;
@@ -110,15 +141,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0px;
+    padding-right: 00px;
     top: 0;
     z-index: 1;
 }
 
 .text-desc{
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 300;
     margin-bottom: 15px;
     z-index: 1;
@@ -129,14 +160,14 @@ body{
     z-index: 1;
 }
 .text-title{
-    font-size: 4rem;
-    line-height: 75px;
+    font-size: 3rem;
+    line-height: 50px;
     color: white;
     z-index: 1;
 }
 
 .text-title span{
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-family: 'Poppins';
     font-weight: 800;
     color: var(--naranja);
@@ -245,8 +276,8 @@ lord-icon{
 
 .card{
     flex: 0 0 25.333333%;
-    height: 200px;
-    width: 250px;
+    height: 55%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -293,6 +324,7 @@ lord-icon{
     flex-direction: column;
     height: auto;
     background-color: white;
+
 }
 
 .box-job-most{
@@ -312,8 +344,8 @@ lord-icon{
 }
 
 .box-job-most:hover{
-    transform: scale(1.2);
-    border:4px var(--naranja) solid;
+    transform: scale(1.1);
+    border:2px rgb(255, 51, 0) solid;
 }
 
 .box-job-most img{
@@ -351,7 +383,27 @@ lord-icon{
 }
 
 .hidraulica:hover{
-    background-image: url(./res/clients/screen-capture.gif);
+    background-image: url(./res/clients/hidraulica.gif);
+}
+
+
+.floudtech{
+    background-image: url(./res/clients/Innovation-home-mobile.webp);
+}
+
+
+.floudtech:hover{
+    background-image: url(./res/clients/floud.gif);
+}
+
+
+.diforte{
+    background-image: url(./res/clients/Innovation-home-mobile.webp);
+}
+
+
+.diforte:hover{
+    background-image: url(./res/clients/floud.gif);
 }
 
 
@@ -366,4 +418,5 @@ lord-icon{
     width: 100%;
     justify-content: space-evenly;
     padding: 50px;
+    flex-wrap: wrap;
 }
