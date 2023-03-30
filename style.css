@@ -55,7 +55,7 @@ body{
 .nav{
     display: flex;
     position: fixed; 
-    background-color: rgba(61, 61, 61, 0.733);
+    background-color: rgba(87, 87, 87, 0.733);
     width: 45vw;
     height: 50px;
     z-index: 100;
@@ -398,12 +398,12 @@ lord-icon{
 
 
 .diforte{
-    background-image: url(./res/clients/Innovation-home-mobile.webp);
+    background-image: url(./res/clients/varsovia\ esq\ 1.webp);
 }
 
 
 .diforte:hover{
-    background-image: url(./res/clients/floud.gif);
+    background-image: url(./res/clients/diforte.gif);
 }
 
 
