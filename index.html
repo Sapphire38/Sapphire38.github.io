@@ -12,7 +12,7 @@
   <body>
 
    <div class="nav-bar">
-    <div class="nav"> <a href="https://sapphire38.github.io/"><img src="./res/Recurso 1.png" height="25px" alt=""></a> <a href="#home">Sobre mi</a><a href="#habilidades">Habilidades</a><a href="#trabajos">Trabajos</a><a href="contacto">Contacto</a></div>
+    <div class="nav"> <a href="https://sapphire38.github.io/"><img src="./res/Recurso 1.png" height="25px" alt=""></a> <a href="#home">Sobre mi</a><a href="#habilidades">Habilidades</a><a href="#trabajos">Trabajos</a><a href="#contacto">Contacto</a></div>
    </div> 
 
     <div id="home" class="home">
@@ -37,7 +37,7 @@
           <br />
           Si estás buscando un desarrollador web confiable, con experiencia y
           habilidades sólidas, no busques más. Soy la elección perfecta para
-          ayudarte a crear un sitio web impresionante que atraerá a más clientes
+          ayudarte a crear un sitio web impresionante <br> que atraerá a más clientes
           y aumentará tu negocio. <br />
           ¡No dudes en ponerte en contacto conmigo para discutir cómo puedo
           <br />
@@ -61,7 +61,8 @@
       <div class="box-title">
         <lord-icon class="wow fadeIn" data-wow-delay="500ms"
           src="https://cdn.lordicon.com/jpqbjwbh.json"
-          trigger="hover"
+          trigger="loop"
+          delay="2000"
           colors="primary:#ff7300,secondary:#e83a30"
           style="width: 250px; height: 250px"
         >
@@ -124,7 +125,8 @@
       <div class="box-title">
         <lord-icon class="wow fadeIn" data-wow-delay="500ms"
           src="https://cdn.lordicon.com/oztibaou.json"
-          trigger="hover"
+          trigger="loop"
+          delay="2000"
           colors="primary:#ff7300,secondary:#e83a30"
           style="width: 250px; height: 250px"
         >
@@ -177,9 +179,55 @@
       </div>
     </div>
 
+    <div id="contacto">
+    
+      <div class="box-title"> 
+        <lord-icon
+        src="https://cdn.lordicon.com/mjmrmyzg.json"
+        trigger="loop"
+        delay="2000"
+        colors="primary:#ff7300,secondary:#e83a30"
+        style="width:250px;height:250px">
+      </lord-icon>
+        <h1
+        class="text-title wow fadeInLeft title-orange"
+        data-wow-delay="300ms"
+      >
+        Contacto.
+      </h1>
+      </div>
+     
+      <div class="cont-box">
+        <div class="box-50">
+          <img height="350px" src="./res/—Pngtree—modern flat design concept of_5332896.png" alt="">
+         <h3>Si tienes alguna pregunta, comentario o simplemente deseas conversar acerca de un posible proyecto, puedes contactarme. <br></h3>
+         <h4> Estoy ansioso por saber más acerca de tus necesidades y ayudarte a hacer realidad tus ideas. <br> ¡No dudes en contactarme en cualquier momento!</h4>
+        </div>
+
+        <div class="box-50">
+          
+          <form class="form" id="contact-form" name="contact-form" action="mail.php" action="URL" method="post" onsubmit="ga('send', 'event', 'enviar', 'blog', 0);">
+
+            <input placeholder="NOMBRE" type="text" id="name" name="name" class="form-control form-name">
+  
+            <input placeholder="TELÉFONO" type="number" id="number" class="form-control form-number">
+  
+            <input placeholder="ASUNTO" type="text" id="subject"  class="form-control form-email">
+  
+            <textarea placeholder="TU CONSULTA" id="message" name="message" rows="4" class="form-control md-textarea"></textarea>
+  
+          </form>
+          <button class="btnSubmit" id="submit" onclick="validateForm()">ENVIAR FORMULARIO </button>
+          <a id="btn-send" onclick="alert('gol')" href=""></a>
+          <h6 class="alert-class" id="status">&nbsp;</h6>
+        </div>
+      </div>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="./validateform.js"></script>
     <script>var image = document.getElementsByClassName('thumbnail');
  new simpleParallax(image, {
 	scale: 1.5
