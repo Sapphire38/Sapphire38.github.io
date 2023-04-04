@@ -185,49 +185,26 @@ lord-icon{
     height: 120px !important;
 }
 
-.box-btn-head{
+.box-ancles{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     flex-direction: row;
-    margin-top: 20px;
-    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 35px;
+    margin-top: 15px;
+    padding-left: 10px;
 }
 
-.box-btn-head button{
-    padding-left: 25px;
-    padding-right: 25px;
-    height: 50px;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.box-btn-head button:first-child{
-    background-color: var(--naranja);
-    color: white;
-    border: 2px solid var(--naranja);
+.box-ancles a svg{
+    scale: 2 !important;
+    color: rgb(255, 255, 255);
     transition: all 300ms;
 }
 
-.box-btn-head button:first-child:hover{
-    background-color: rgb(255, 81, 0);
-    border: 2px solid rgb(255, 81, 0);
+.box-ancles a svg:hover{
+    scale: 2.2 !important;
+    color: var(--naranja);
 }
-
-.box-btn-head button:last-child{
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);  
-    border: 2px solid white;
-    transition: all 300ms;
-}
-
-.box-btn-head button:last-child:hover{
-    color: var(--naranja); 
-    border: 2px solid var(--naranja);
-}
-
 
 .habilidades{
     height: auto;
@@ -467,8 +444,31 @@ input, textarea{
     border-bottom: 3px solid rgb(255, 102, 0) !important;
     width: 30vw;
     height: 45px;
+    padding:5px;
     margin-top: 40px;
     font-size: 1vw;
     font-weight: 300 !important;
     color: black;
+}
+
+input:focus, textarea:focus, textarea:active,input:active {
+    outline: none;
+}
+
+#submit{
+    width: 76%;
+    padding:5px;
+    height: 45px;
+    margin-top: 35px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgb(255, 102, 0);
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+#submit:hover{
+    background-color: rgb(255, 102, 0);;
+    color: white;
 }
