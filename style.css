@@ -107,14 +107,23 @@ body{
     background: transparent;
     flex-wrap: wrap;
     z-index: 1;
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #360000, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #360000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.simpleParallax{
+    background-color: black;
 }
 
 .img-background-home{
     position: absolute;
     top: 0;
     z-index: 0;
-   width: 100%;
-   height: 100%;
+    height: 100%;
+    overflow: hidden;
+
 }
 
 .img-head{
@@ -269,24 +278,18 @@ lord-icon{
 }
 
 .card-box{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
-    width: 100%;    
-    justify-items: center;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
-   
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 20px;
+margin-top: 8vw;
 }
 
 .card{
-    flex: 0 0 25.333333%;
     height: 55%;
-    width: 100%;
+    width: 16%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -498,4 +501,110 @@ input:focus, textarea:focus, textarea:active,input:active {
 #submit:hover{
     background-color: rgb(255, 102, 0);;
     color: white;
+}
+
+@media (max-width:768px) {
+
+    body{
+        overflow-x: hidden !important;
+    }
+
+    .nav{
+        width: 98vw;
+    }
+
+    .nav a {
+        font-size: 3vw;
+    }
+
+    .info-box{
+        height: auto;
+        width: 100vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        justify-content: center;
+    }
+
+    .img-head{
+        display: none;
+    }
+
+    .habilidades{
+    
+        clip-path: none;
+    }
+
+
+    .text-title{
+        font-size: 10vw;  
+    }
+
+    .text-desc{
+        font-size: 3vw;
+    }
+
+
+    .text-title span{
+        font-size: 8vw;  
+    }
+
+    .card{
+        width: 40%;
+    }
+
+    .full-card{
+        height: 8vh;
+    }
+
+    .img-background-home{
+        display: none;
+    }
+
+    #contacto{
+        padding-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .home{
+        height: auto;
+        padding-top: 30vw;
+        padding-bottom: 30vw;
+        align-items: center;
+ 
+    
+    }
+
+    .cont-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-50{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .box-50 img{
+        height: 200px;
+    }
+
+    .box-job-most{
+        height: 180px;
+        width: 80vw;
+    }
+
+    .box-job-most img{
+        height: 10vw;
+       
+    }
+
+
+    .box-ancles-contact a{
+       scale: 1;
+    }
+
+    input, textarea{
+        width: 80vw;
+        font-size: 4vw;
+    }
 }
