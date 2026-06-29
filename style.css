@@ -322,16 +322,11 @@ lord-icon {
     color: #fff;
 }
 
-/* ---------- Sección Habilidades ---------- */
-.habilidades {
+/* ---------- Sección Experiencia ---------- */
+.experiencia {
     height: auto;
-    padding-top: 100px;
-    background-size: cover;
+    padding: 110px 8vw 80px;
     background-color: #000;
-    background-position: top;
-    border-top: 5px solid #000;
-    background-clip: padding-box;
-    clip-path: ellipse(100% 60% at 50% 40%);
 }
 
 #contacto {
@@ -358,65 +353,107 @@ lord-icon {
     margin-bottom: 25px;
 }
 
-/* ---------- Tarjetas de habilidades ---------- */
-.card-box {
+/* ---------- Tarjeta de experiencia ---------- */
+.exp-box {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-top: 6vw;
-    padding: 0 5vw;
+    margin-top: 3vw;
 }
 
-.card {
-    height: 55%;
-    width: 16%;
-    min-width: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: var(--radius);
-    margin-bottom: 80px;
-    cursor: pointer;
-}
-
-.full-card {
-    position: relative;
-    background: linear-gradient(143deg, var(--surface-3) 0%, var(--surface-2) 75%);
+.exp-card {
     width: 100%;
-    height: 100px;
-    border-radius: var(--radius);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 880px;
+    background: linear-gradient(160deg, rgba(46, 46, 46, 0.55), rgba(18, 18, 18, 0.82));
     border: 1px solid var(--border);
-    transition: transform 400ms var(--ease), box-shadow 400ms var(--ease), border-color 400ms var(--ease);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 42px clamp(24px, 4vw, 50px);
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover .full-card {
-    transform: translateY(-6px);
-    border-color: rgba(255, 115, 0, 0.55);
-    box-shadow: var(--shadow-glow);
+.exp-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    background-image: var(--accent-grad);
 }
 
-.card:hover img {
-    transform: translateY(-15px) scale(1.05);
+.exp-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
 }
 
-.card img {
-    transition: transform 350ms var(--ease);
-    height: 120px;
-    margin-bottom: 15px;
-}
-
-.card h2 {
-    font-size: 1.4rem;
+.exp-role {
     color: #fff;
-    font-weight: 500;
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.exp-company {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    background-image: var(--accent-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.exp-badge {
+    flex-shrink: 0;
+    background: rgba(255, 115, 0, 0.12);
+    border: 1px solid rgba(255, 115, 0, 0.45);
+    color: var(--naranja);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.exp-lead {
+    color: var(--text-muted);
+    font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.exp-list {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+}
+
+.exp-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--text);
+    font-weight: 300;
+    font-size: clamp(0.88rem, 1vw, 0.98rem);
+    line-height: 1.55;
+}
+
+.exp-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: var(--accent-grad);
 }
 
 /* ---------- Sección Proyectos ---------- */
@@ -827,8 +864,17 @@ h4 {
         display: none;
     }
 
-    .habilidades {
-        clip-path: none;
+    .experiencia {
+        padding: 80px 5vw 60px;
+    }
+
+    .exp-card {
+        padding: 30px 22px;
+    }
+
+    .exp-head {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .text-title {
@@ -841,14 +887,6 @@ h4 {
 
     .text-title span {
         font-size: 8vw;
-    }
-
-    .card {
-        width: 40%;
-    }
-
-    .full-card {
-        height: 8vh;
     }
 
     .img-background-home {
