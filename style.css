@@ -556,13 +556,6 @@ lord-icon {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
 h3 {
     margin-top: 20px;
     color: var(--text);
@@ -577,64 +570,217 @@ h4 {
     line-height: 1.6;
 }
 
-input,
-textarea {
-    border: 0 !important;
-    border-bottom: 3px solid var(--naranja) !important;
-    width: 30vw;
-    height: 50px;
-    padding: 10px;
-    margin-top: 32px;
-    font-size: clamp(0.85rem, 1vw, 1rem);
-    font-weight: 300 !important;
-    color: #111;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    transition: background-color 250ms var(--ease), box-shadow 250ms var(--ease);
+/* ---------- Tarjeta de contacto (reemplaza el formulario) ---------- */
+.contact-card {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 42px 34px;
+    background: linear-gradient(160deg, rgba(46, 46, 46, 0.6), rgba(18, 18, 18, 0.78));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: #6b6b6b;
-    letter-spacing: 0.5px;
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-image: var(--accent-grad);
 }
 
-input:focus,
-textarea:focus,
-textarea:active,
-input:active {
-    outline: none;
-    background-color: #fff;
-    box-shadow: 0 6px 18px rgba(255, 90, 0, 0.18);
+.contact-card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 4px;
 }
 
-#submit {
-    width: 76%;
-    padding: 5px;
+.contact-card-text {
+    color: var(--text-muted);
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     height: 52px;
-    margin-top: 32px;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    color: var(--naranja);
-    background-color: transparent;
-    border: 2px solid var(--naranja);
     border-radius: var(--radius-sm);
-    transition: background-color 300ms var(--ease), color 300ms var(--ease), box-shadow 300ms var(--ease);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 300ms var(--ease), box-shadow 300ms var(--ease),
+        background-color 300ms var(--ease), color 300ms var(--ease), border-color 300ms var(--ease);
 }
 
-#submit:hover {
+.contact-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-btn--wa {
     background-image: var(--accent-grad);
     color: #fff;
-    border-color: transparent;
+    border: 2px solid transparent;
+}
+
+.contact-btn--wa:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow-glow);
 }
 
-.alert-class {
-    margin-top: 14px;
-    color: var(--rojo);
-    font-weight: 500;
+.contact-btn--mail {
+    background: transparent;
+    color: var(--naranja);
+    border: 2px solid var(--naranja);
+}
+
+.contact-btn--mail:hover {
+    background-image: var(--accent-grad);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    position: relative;
+    background: linear-gradient(to bottom, #000 0%, #160000 100%);
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 60px 8vw 0;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-image: var(--accent-grad);
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 44px;
+}
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.footer-logo span {
+    background-image: var(--accent-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-brand p {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-heading {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.92rem;
+    width: fit-content;
+    transition: color 250ms var(--ease), padding-left 250ms var(--ease);
+}
+
+.footer-nav a:hover {
+    color: var(--naranja);
+    padding-left: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: #fff;
+    transition: transform 300ms var(--ease), background-color 300ms var(--ease),
+        border-color 300ms var(--ease), box-shadow 300ms var(--ease);
+}
+
+.footer-social a:hover {
+    background-image: var(--accent-grad);
+    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.footer-social svg {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 22px 0;
+    font-size: 0.84rem;
+    color: rgba(245, 245, 245, 0.55);
 }
 
 /* ---------- Accesibilidad: reducir movimiento ---------- */
@@ -749,9 +895,27 @@ input:active {
         scale: 1;
     }
 
-    input,
-    textarea {
-        width: 80vw;
-        font-size: 4vw;
+    .contact-card {
+        max-width: 100%;
+        padding: 32px 22px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .footer-nav {
+        align-items: center;
+    }
+
+    .footer-nav a:hover {
+        padding-left: 0;
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }
